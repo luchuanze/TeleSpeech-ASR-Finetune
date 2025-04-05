@@ -1,8 +1,8 @@
 # TeleSpeech-ASR 表征训练下游任务
 * TeleSpeech-ASR（星辰超多方言语音识别大模型）是由中国电信人工智能研究院（TeleAI）发布业内首个支持30种方言自由混说的语音预训练模型。
 * 由于原项目依赖fairseq和kaldi预处理， 应用起来就非常麻烦，本项目提供一个不依赖与fairseq和kaldi的训练推理框架。
-* 本项目用官方的 large 预训练模型，并将转换原来的 fairseq 风格模型，使得可以应用wenet框架。模型下载链接：
-* 
+* 本项目用官方的 large 预训练模型，并将转换原来的 fairseq 风格模型，使得可以应用wenet框架。模型下载：
+  git clone https://www.modelscope.cn/luchuanze/TeleSpeech-ASR-Finetune.git
 ## 框架简介
 * 框架基于wenet搭建，支持从预训练模型提取中间层表征，作为ASR模型的特征输入，或生成离散单元作为离散ASR模型的输入进行训练
 * 支持ASR模型/解码方式：Conformer、Transformer以及对应的ctc_greedy_search、attention、attention_rescore等方式
